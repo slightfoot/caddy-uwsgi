@@ -1,0 +1,9 @@
+:80 {
+	#proxy / uwsgi://localhost:8080 {
+	#	except /favicon.ico
+	#	transparent
+	#}
+	uwsgi / localhost:8080
+	errors stdout
+	log stdout
+}
